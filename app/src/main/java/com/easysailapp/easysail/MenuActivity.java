@@ -13,6 +13,8 @@ public class MenuActivity extends AppCompatActivity {
 
     private Button foodButton;
     private Button callButton;
+    private Button maintenanceButton;
+    private Button cleanButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +35,11 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 AlertDialog.Builder builder1 = new AlertDialog.Builder(MenuActivity.this);
-                builder1.setMessage("Are You Sure?");
+                builder1.setMessage("Please confirm that you want to call us.");
                 builder1.setCancelable(true);
 
                 builder1.setPositiveButton(
-                        "Yes",
+                        "Confirm",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 Intent intent = new Intent(Intent.ACTION_DIAL);
@@ -49,10 +51,71 @@ public class MenuActivity extends AppCompatActivity {
                         });
 
                 builder1.setNegativeButton(
-                        "No",
+                        "Cancel",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alert11 = builder1.create();
+                alert11.show();
+            }
+        });
+        maintenanceButton = (Button) findViewById(R.id.maintenance_button);
+        maintenanceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        cleanButton = (Button) findViewById(R.id.clean_button);
+        cleanButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(MenuActivity.this);
+                builder1.setMessage("Please confirm that you need your room cleaned");
+                builder1.setCancelable(true);
+
+                builder1.setPositiveButton(
+                        "Confirm",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                AlertDialog.Builder builder1 = new AlertDialog.Builder(MenuActivity.this);
+                                builder1.setMessage("Your request has been sent. Someone will be there shortly to help you.");
+                                builder1.setCancelable(true);
+
+                                builder1.setNegativeButton(
+                                        "OK",
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                dialog.cancel();
+                                            }
+                                        });
+
+                                AlertDialog alert11 = builder1.create();
+                                alert11.show();
+                            }
+                        });
+
+                builder1.setNegativeButton(
+                        "Cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                AlertDialog.Builder builder1 = new AlertDialog.Builder(MenuActivity.this);
+                                builder1.setMessage("Your request has been canceled");
+                                builder1.setCancelable(true);
+
+                                builder1.setNegativeButton(
+                                        "OK",
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                dialog.cancel();
+                                            }
+                                        });
+
+                                AlertDialog alert11 = builder1.create();
+                                alert11.show();
                             }
                         });
 
