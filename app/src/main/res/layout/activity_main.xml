@@ -3,7 +3,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.easysailapp.easysail.MainActivity">
+
+    tools:context="com.easysailapp.easysail.MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background_main">
 
 
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/card_id"
+        android:textColorHint="#2a2a2a"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+
+        />
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:layout_margin="8dp"
+        android:text="@string/sign_in"
+        />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="16dp"
+                android:textStyle="italic"
+                android:textSize="24sp"
+                android:text="@string/lost_info"
+                android:textColor="#FFFF"
+                />
+        </RelativeLayout>
 </LinearLayout>
