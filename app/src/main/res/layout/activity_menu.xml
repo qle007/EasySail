@@ -2,28 +2,45 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="8dp"
+    android:background="#e0f2fd"
+    >
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Clean"
+        android:layout_margin="8dp"
+        android:text="@string/menu_clean"
         android:background="@drawable/button_shape"/>
 
     <Button
         android:id="@+id/food_button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Food" />
+        android:layout_margin="8dp"
+        android:text="@string/menu_food"
+        android:background="@drawable/button_shape"/>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Maintenance" />
+        android:layout_margin="8dp"
+        android:text="@string/menu_maintenance"
+        android:background="@drawable/button_shape"/>
 
     <Button
         android:id="@+id/call_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/menu_call"
+        android:background="@drawable/button_shape"/>
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Call" />
+        android:src="@drawable/ship"
+        />
 </LinearLayout>

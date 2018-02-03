@@ -3,4 +3,9 @@
     <string name="sign_in">Sign In</string>
     <string name="card_id">Card ID</string>
     <string name="lost_info">Lost your card?</string>
+
+    <string name="menu_call">Call</string>
+    <string name="menu_clean">Cleaning</string>
+    <string name="menu_maintenance">Maintenance</string>
+    <string name="menu_food">Order Food</string>
 </resources>
