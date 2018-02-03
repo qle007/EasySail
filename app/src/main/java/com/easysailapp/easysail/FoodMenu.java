@@ -1,5 +1,7 @@
 package com.easysailapp.easysail;
 
+import android.content.Context;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,14 +10,23 @@ import java.util.List;
  */
 
 public class FoodMenu {
-    private List<Food> menuItems = new ArrayList<Food>();
+    private List<Food> menuItems = new ArrayList<>();
     private Food foodHolder;
+    private static FoodMenu sFoodMenu;
+
+    public static FoodMenu get(Context context){
+        if(sFoodMenu == null){
+            sFoodMenu = new FoodMenu(context);
+        }
+        return sFoodMenu;
+    }
 
     public List<Food> getMenuItems() {
         return menuItems;
     }
 
-    public FoodMenu(){
+    //from the static variable, no other class will be able to create this private constructor.
+    private FoodMenu(Context context){
         menuItems.add(new Food("Breakfast" , "Omelete du fromage", "Eggs with cheese", "10.50"));
         menuItems.add(new Food("Breakfast" , "Pho ga", "Vietnamese noodle soup with chicken", "10.50"));
         menuItems.add(new Food("Breakfast" , "PB & J", "Classic PeanutButter with Strawberry or Mango Jelly Sandwich", "5.50"));
