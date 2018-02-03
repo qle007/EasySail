@@ -7,14 +7,16 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 
 public class MenuActivity extends AppCompatActivity {
 
-    private Button foodButton;
-    private Button callButton;
-    private Button maintenanceButton;
-    private Button cleanButton;
+    private ImageView foodButton;
+    private ImageView callButton;
+    private ImageView maintenanceButton;
+    private ImageView cleanButton;
+    private ImageView mangoFeedImage; //takes u to the cool secret chat
+
     private String itemSelected;
     private String[] maintenanceList = {"Shower", "Toilet", "Lighting", "Electricity", "Other"};
 
@@ -23,7 +25,7 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        foodButton = (Button) findViewById(R.id.food_button);
+        foodButton = (ImageView) findViewById(R.id.food_button);
         foodButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,7 +36,7 @@ public class MenuActivity extends AppCompatActivity {
 
 
 
-        callButton = (Button) findViewById(R.id.call_button);
+        callButton = (ImageView) findViewById(R.id.call_button);
         callButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,7 +71,7 @@ public class MenuActivity extends AppCompatActivity {
         });
 
 
-        maintenanceButton = (Button) findViewById(R.id.maintenance_button);
+        maintenanceButton = (ImageView) findViewById(R.id.maintenance_button);
         maintenanceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -122,7 +124,7 @@ public class MenuActivity extends AppCompatActivity {
         });
 
 
-        cleanButton = (Button) findViewById(R.id.clean_button);
+        cleanButton = (ImageView) findViewById(R.id.clean_button);
         cleanButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

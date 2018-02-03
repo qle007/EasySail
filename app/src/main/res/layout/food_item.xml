@@ -39,6 +39,7 @@
         />
 
     <CheckBox
+        android:id="@+id/purchase_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"

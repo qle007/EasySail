@@ -8,9 +8,9 @@ public class Food {
     private String foodType;
     private String foodName;
     private String description;
-    private String price;
+    private double price;
 
-    public Food(String foodType, String foodName, String description, String price) {
+    public Food(String foodType, String foodName, String description, double price) {
         this.foodType = foodType;
         this.foodName = foodName;
         this.description = description;
@@ -41,11 +41,11 @@ public class Food {
         this.description = description;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 }

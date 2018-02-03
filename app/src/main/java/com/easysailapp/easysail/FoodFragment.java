@@ -8,8 +8,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -33,23 +38,54 @@ public class FoodFragment extends Fragment{
     }
 
     private class FoodHolder extends RecyclerView.ViewHolder{
+        int clicked = 0;
+        ArrayList <Food> cart = new ArrayList<>();
         private Food mFood;
         private TextView mFoodNameTextView;
         private TextView mPriceTextView;
         private TextView mDescriptionTextView;
+        private CheckBox mPurchaseCheckBox;
+        private TextView mOrderTextView;
 
         public FoodHolder(LayoutInflater inflater, ViewGroup parent){
             super(inflater.inflate(R.layout.food_item, parent, false));
             mFoodNameTextView = (TextView) itemView.findViewById(R.id.food_name_text);
             mDescriptionTextView = (TextView) itemView.findViewById(R.id.description_text);
             mPriceTextView = (TextView) itemView.findViewById(R.id.price_text);
+            mPurchaseCheckBox = (CheckBox) itemView.findViewById(R.id.purchase_checkbox);
+            mOrderTextView = (TextView) itemView.findViewById(R.id.order_textview);
+
         }
 
         public void bind(Food food){
+
             mFood = food;
             mFoodNameTextView.setText(mFood.getFoodName());
             mDescriptionTextView.setText(mFood.getDescription());
-            mPriceTextView.setText(mFood.getPrice());
+            DecimalFormat df = new DecimalFormat("##.00");
+            mPriceTextView.setText(String.valueOf(df.format(mFood.getPrice())));
+            mPurchaseCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                    if(clicked == 0){
+                        Toast.makeText(getActivity(), mFood.getFoodName() + " added to cart!", Toast.LENGTH_SHORT).show();
+                        clicked++;
+                        cart.add(mFood);
+                    }
+                    else{
+                        clicked = 0;
+                        cart.remove(mFood);
+                    }
+                }
+            });
+
+            mOrderTextView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                }
+            });
         }
 
     }

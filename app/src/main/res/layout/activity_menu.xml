@@ -2,47 +2,80 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#ffffff"
     android:gravity="center_horizontal"
-    android:padding="8dp"
-    android:background="#e0f2fd"
+    android:orientation="vertical"
+    android:padding="16dp"
+
     >
 
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="@string/menu_clean"
-        android:background="@drawable/button_shape"
-        android:id="@+id/clean_button"/>
+        android:gravity="center"
+        >
 
-    <Button
-        android:id="@+id/food_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="@string/menu_food"
-        android:background="@drawable/button_shape"/>
+        <ImageView
+            android:id="@+id/clean_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clean"
+            android:layout_weight="1"
+            />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="@string/menu_maintenance"
-        android:background="@drawable/button_shape"
-        android:id="@+id/maintenance_button"/>
 
-    <Button
-        android:id="@+id/call_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="@string/menu_call"
-        android:background="@drawable/button_shape"/>
+        <ImageView
+            android:id="@+id/food_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/food"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="290dp"
+        android:layout_height="316dp"
+        android:src="@drawable/ship" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/ship"
-        />
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/maintenance_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/maintain"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/mango_button"
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:src="@drawable/mangofeed" />
+
+
+
+        <ImageView
+            android:id="@+id/call_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phone"
+            android:layout_weight="1"
+            />
+
+
+    </LinearLayout>
+
+
 </LinearLayout>
