@@ -8,4 +8,6 @@
     <string name="menu_clean">Cleaning</string>
     <string name="menu_maintenance">Maintenance</string>
     <string name="menu_food">Order Food</string>
+
+    <string name="food_menu">Menu</string>
 </resources>

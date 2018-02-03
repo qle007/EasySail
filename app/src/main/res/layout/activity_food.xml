@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.RecyclerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.easysailapp.easysail.FoodActivity">
+    tools:context="com.easysailapp.easysail.FoodActivity"
+    android:id="@+id/food_recycler_layout">
 
 
-
-
-</LinearLayout>
+</android.support.v7.widget.RecyclerView>
