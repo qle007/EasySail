@@ -17,7 +17,7 @@
         android:gravity="center_horizontal"
         android:layout_gravity="center"
         android:layout_marginTop="150dp"
-
+        android:id="@+id/card_id_edit_text"
         />
 
     <Button
@@ -27,6 +27,7 @@
         android:padding="16dp"
         android:layout_margin="8dp"
         android:text="@string/sign_in"
+        android:id="@+id/sign_in_button"
         />
 
         <RelativeLayout
