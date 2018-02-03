@@ -61,7 +61,4 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
     }
-    private void alertForCallButton(){
-
-    }
 }
