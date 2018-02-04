@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "744683892914",
+    "firebase_url": "https://easysail-1b7a5.firebaseio.com",
+    "project_id": "easysail-1b7a5",
+    "storage_bucket": "easysail-1b7a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744683892914:android:16ec87e9e60fa8ca",
+        "android_client_info": {
+          "package_name": "com.easysailapp.easysail"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744683892914-ulluh9me8bv7s3sijtppt5gg7f49b3nc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.easysailapp.easysail",
+            "certificate_hash": "9cd24db07be38233528716b057a570c4ea06a3a3"
+          }
+        },
+        {
+          "client_id": "744683892914-om8cvd3thnqki45e3tlkrkd6rb2ned7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGeXtocJsMdvArbuwwnYjTwSB6KNoTaVQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744683892914-om8cvd3thnqki45e3tlkrkd6rb2ned7j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

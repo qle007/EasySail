@@ -34,8 +34,14 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-
-
+        mangoFeedImage = (ImageView) findViewById(R.id.mango_button);
+        mangoFeedImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MenuActivity.this,MangoFeedActivity.class);
+                startActivity(intent);
+            }
+        });
         callButton = (ImageView) findViewById(R.id.call_button);
         callButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +95,7 @@ public class MenuActivity extends AppCompatActivity {
                                 "OK",
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
+                                        FoodFragment.checkoutPrice = 0;
                                         dialog.cancel();
                                     }
                                 });

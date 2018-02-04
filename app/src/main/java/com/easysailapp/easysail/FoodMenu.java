@@ -10,8 +10,10 @@ import java.util.List;
  */
 
 public class FoodMenu {
+
+
+
     private List<Food> menuItems = new ArrayList<>();
-    private Food foodHolder;
     private static FoodMenu sFoodMenu;
 
     public static FoodMenu get(Context context){

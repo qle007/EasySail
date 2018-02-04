@@ -24,6 +24,8 @@ import java.util.List;
 public class FoodFragment extends Fragment{
     private RecyclerView mRecyclerView;
     private FoodAdapter mAdapter;
+    public static double checkoutPrice = 0;
+    public static ArrayList<String> checkoutDes = new ArrayList<>();
 
     @Nullable
     @Override
@@ -69,23 +71,21 @@ public class FoodFragment extends Fragment{
                 public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 
                     if(clicked == 0){
-                        Toast.makeText(getActivity(), mFood.getFoodName() + " added to cart!", Toast.LENGTH_SHORT).show();
+
                         clicked++;
-                        cart.add(mFood);
+                        checkoutPrice+= mFood.getPrice();
+                        checkoutDes.add(mFood.getFoodName());
+                        Toast.makeText(getActivity(), mFood.getFoodName() + " added to cart!" + " Price: " + checkoutPrice, Toast.LENGTH_SHORT).show();
                     }
                     else{
+                        checkoutDes.remove(mFood.getFoodName());
+                        checkoutPrice-=mFood.getPrice();
                         clicked = 0;
-                        cart.remove(mFood);
+
                     }
                 }
             });
 
-            mOrderTextView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                }
-            });
         }
 
     }
