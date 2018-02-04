@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A3EE5A5BD5B6D16E220D6C12 /* Pods_RoomService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90DA886904D38C161D0182F /* Pods_RoomService.framework */; };
+		B31E7E6220274D9C0082377F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31E7E6120274D9C0082377F /* LoginViewController.swift */; };
 		B3D8D24320261D0800008142 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D8D24220261D0800008142 /* AppDelegate.swift */; };
 		B3D8D24520261D0900008142 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D8D24420261D0900008142 /* HomeViewController.swift */; };
 		B3D8D24820261D0900008142 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D8D24620261D0900008142 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		0F7E1003914B00621FBBED7A /* Pods-RoomService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomService.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoomService/Pods-RoomService.release.xcconfig"; sourceTree = "<group>"; };
 		57E70A883068505DD7BFA95C /* Pods-RoomService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomService.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoomService/Pods-RoomService.debug.xcconfig"; sourceTree = "<group>"; };
 		A90DA886904D38C161D0182F /* Pods_RoomService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoomService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31E7E6120274D9C0082377F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B3D8D23F20261D0800008142 /* RoomService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoomService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D8D24220261D0800008142 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3D8D24420261D0900008142 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				B3D8D24920261D0900008142 /* Assets.xcassets */,
 				B3D8D24B20261D0900008142 /* LaunchScreen.storyboard */,
 				B3D8D24E20261D0900008142 /* Info.plist */,
+				B31E7E6120274D9C0082377F /* LoginViewController.swift */,
 			);
 			path = RoomService;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B31E7E6220274D9C0082377F /* LoginViewController.swift in Sources */,
 				B3D8D24520261D0900008142 /* HomeViewController.swift in Sources */,
 				B3D8D24320261D0800008142 /* AppDelegate.swift in Sources */,
 			);

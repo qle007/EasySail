@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import LoginKit
 
 class HomeViewController: UIViewController {
     struct usermetadata {
@@ -16,14 +17,21 @@ class HomeViewController: UIViewController {
         static let name = ""
         static let room = ""
     }
+    lazy var loginCoordinator: LoginCoordinator = {
+        return LoginCoordinator(HomeViewController)
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         var resourceFileDictionary: NSDictionary?
-        
+        let storyBoard = UIStoryboard(name: "Main", Bundle: nil)
+        let abcViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+        abcViewController.title = "LOGIN"
+        navigationController?.pushViewController(abcViewController, animated: true)
         //Load content of Info.plist into resourceFileDictionary dictionary
         if let path = Bundle.main.path(forResource: "Info", ofType: "plist") {
             resourceFileDictionary = NSDictionary(contentsOfFile: path)
         }
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

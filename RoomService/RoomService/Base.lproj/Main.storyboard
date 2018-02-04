@@ -13,7 +13,7 @@
         <!--Login-->
         <scene sceneID="lQC-v3-Auo">
             <objects>
-                <viewController title="Login" id="0JC-tD-xVF" sceneMemberID="viewController">
+                <viewController title="Login" id="0JC-tD-xVF" customClass="LoginViewController" customModule="RoomService" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iei-lm-kHj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,6 +29,7 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="idInput:" destination="NAP-L6-Q4n" eventType="editingDidEnd" id="Zgp-eS-FIp"/>
+                                    <action selector="login" destination="0JC-tD-xVF" eventType="editingDidEnd" id="VDu-sb-pbl"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jag-bj-tGa">
