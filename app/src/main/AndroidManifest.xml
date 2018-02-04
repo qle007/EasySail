@@ -23,7 +23,8 @@
         <activity android:name=".FoodActivity" />
         <activity android:name=".SplashScreen" />
         <activity android:name=".MangoFeedActivity" />
-        <activity android:name=".MangoFeedFragment"></activity>
+        <activity android:name=".MangoFeedFragment" />
+        <activity android:name=".PostFeed"></activity>
     </application>
 
 </manifest>

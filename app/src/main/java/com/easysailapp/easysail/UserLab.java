@@ -23,6 +23,7 @@ public class UserLab {
     DatabaseReference myRef = database.getReference("User");
 
 
+
     public static UserLab get(Context context){
         if(sUserLab == null){
             sUserLab = new UserLab(context);
@@ -40,18 +41,17 @@ public class UserLab {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                String value = dataSnapshot.getValue(String.class);
-                if(value != null)
+                Users = new ArrayList<>();
+                for(DataSnapshot e : dataSnapshot.getChildren())
                 {
-                    String key = dataSnapshot.getKey();
 
-                    if(key.equals("User"))
-                    {
-                        User userHolder = dataSnapshot.getValue(User.class);
-                        Users.add(userHolder);
-                    }
+                    String key = e.getKey();
+                    String name = dataSnapshot.child(key).child("name").getValue(String.class);
+                    String message = dataSnapshot.child(key).child("message").getValue(String.class);
+
+                    Users.add(new User(name,message));
                 }
-                Log.d("read from data ", "Value is: " + value);
+
             }
 
             @Override

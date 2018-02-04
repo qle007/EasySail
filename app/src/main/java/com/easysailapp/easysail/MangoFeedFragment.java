@@ -18,7 +18,7 @@ import java.util.List;
 
 public class MangoFeedFragment extends Fragment{
     private RecyclerView mRecyclerView;
-    private FeedAdapter mAdapter;
+    public static FeedAdapter mAdapter;
 
     @Nullable
     @Override
@@ -36,6 +36,7 @@ public class MangoFeedFragment extends Fragment{
     private class FeedHolder extends RecyclerView.ViewHolder{
         TextView name;
         TextView message;
+        User mUser;
 
         public FeedHolder(LayoutInflater inflater, ViewGroup parent){
             super(inflater.inflate(R.layout.feed_item, parent, false));
@@ -45,7 +46,9 @@ public class MangoFeedFragment extends Fragment{
         }
 
         public void bind(User user){
-
+            mUser = user;
+            name.setText(mUser.getName().toString());
+            message.setText(mUser.getMessage().toString());
 
         }
 
